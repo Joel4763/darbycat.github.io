@@ -1,0 +1,195 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "normalize",
+        "syntax-highlighting"
+;
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: 'Roboto', sans-serif;
+$title-font-family: 'Roboto Slab', serif;
+$base-font-size:   16px;
+$base-line-height: 1.5;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #FF6022;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /*height: 100%;*/
+}
+
+body {
+    height: 100%;
+    background-color: #EDEDED;
+    margin: 0;
+    color: #222;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.45;
+    font-size: 13pt;
+}
+
+.nav-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff6f00;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+}
+
+.wrapper{
+    display: flex;
+    padding: 2em;
+    margin: 0;
+    height: 100%;
+
+}
+
+a:hover {
+    color: #ff4d4d;
+}
+a::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: .2s background-color ease-out, .2s width ease-out;
+}
+a:hover::after{
+    width: 100%;
+    background: #ff4d4d;
+}
+.sidebar {
+    background-color: #fbfbfb;
+    padding: 2em;
+    height: 100%;
+    width: 30%;
+    min-width: 20rem;
+}
+
+.sidebar a{
+    color: #333;
+    width: 100%;
+    transition: .2s color;
+}
+
+.sidebar a:hover{
+    color: #ff4d4d;
+}
+
+
+.content {
+    margin: 2em 3em;
+    flex-grow: 1;
+}
+
+.header {
+    padding: 0.3em 0.15em;
+    font-size: 20pt;
+    line-height: 1em;
+    border-bottom: solid 4px #f56a6a;
+}
+
+.title {
+    color: #444;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+.menu > ul > li {
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    border-top: solid 1px rgb(200, 200, 200);
+    font-size: 14.5pt;
+    padding-right: 2em;
+    list-style: none;
+    padding: 0.75em 1em;
+}
+
+.menu > ul > li:first-child {
+    border-top: 0;
+}
+
+a {
+    color: #ff6f00;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s color;
+    
+}
+
+.title{
+    font-size: 3em;
+    font-weight: bold;
+    color: #222;
+}
+
+h1{
+    font-size: 2em;       
+    font-weight: normal;
+    color: #222;
+}
+
+/*a:not( [href*='yourdomain.com'] ):not( [href^='#'] ):not( [href^='/'] )::after {
+    font-family:"Font Awesome 5 Free";
+    content: "\f35d";
+    font-weight: 900;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}*/
+
+.content ul, .content ol{
+    padding-left: 2rem;
+}
+
+h2 {
+    padding: 0.4em .15em;
+    line-height: 1em;
+    border-bottom: solid 3px #f56a6a;
+    /*padding: inherit;*/
+    /*margin: inherit;*/
+}
+
+
