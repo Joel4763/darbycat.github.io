@@ -192,4 +192,11 @@ h2 {
     /*margin: inherit;*/
 }
 
-
+.site-title{
+    color: #222;
+    display: inline;
+    text-decoration: none;
+    &::after{
+        display: none;
+    }
+}
