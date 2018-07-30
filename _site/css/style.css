@@ -637,9 +637,6 @@ th {
 * {
   box-sizing: border-box; }
 
-html {
-  /*height: 100%;*/ }
-
 body {
   height: 100%;
   background-color: #EDEDED;
@@ -649,6 +646,9 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.45;
   font-size: 13pt; }
+
+.news {
+  text-transform: initial !important; }
 
 .nav-button {
   display: flex;
@@ -684,8 +684,8 @@ a:hover::after {
   background-color: #fbfbfb;
   padding: 2em;
   height: 100%;
-  width: 30%;
-  min-width: 20rem; }
+  width: 27rem;
+  min-width: 27rem; }
 
 .sidebar a {
   color: #333;
@@ -739,24 +739,13 @@ h1 {
   font-weight: normal;
   color: #222; }
 
-/*a:not( [href*='yourdomain.com'] ):not( [href^='#'] ):not( [href^='/'] )::after {
-    font-family:"Font Awesome 5 Free";
-    content: "\f35d";
-    font-weight: 900;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-}*/
 .content ul, .content ol {
   padding-left: 2rem; }
 
 h2 {
   padding: 0.4em .15em;
   line-height: 1em;
-  border-bottom: solid 3px #f56a6a;
-  /*padding: inherit;*/
-  /*margin: inherit;*/ }
+  border-bottom: solid 3px #f56a6a; }
 
 .site-title {
   color: #222;

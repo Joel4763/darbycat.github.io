@@ -6,13 +6,21 @@
     <div class="sidebar">
 
         <nav class="menu">
-                <h2>Menu</h2>
+            <h2>Menu</h2>
             <ul>
-               {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
-          {% endif %}
-        {% endfor %}
+                {% for my_page in site.pages %}
+                    {% if my_page.title %}
+                <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+            <br /><br />
+            <h2>News</h2>
+            <ul>
+                {% for headline in site.data.news %}
+                <li class="news">{{ headline.news }}</li>
+                {% endfor %}
             </ul>
         </nav>
     </div>

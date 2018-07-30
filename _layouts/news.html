@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <article class="content">
+    <a class="site-title" href="{{ site.baseurl }}/"><h2>{{ site.title }}</h2></a>
+        {{ content }}
+    </article>
+    {% include footer.html %}
+  </body>
+</html>
