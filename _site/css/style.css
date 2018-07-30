@@ -657,7 +657,10 @@ body {
   background-color: #ff6f00;
   color: white;
   width: 2rem;
-  height: 2rem; }
+  height: 2rem;
+  border: solid 2px #ff6f00;
+  outline: none;
+  margin: 1em 0 0 1em; }
 
 .wrapper {
   display: flex;
@@ -685,7 +688,10 @@ a:hover::after {
   padding: 2em;
   height: 100%;
   width: 27rem;
-  min-width: 27rem; }
+  min-width: 27rem;
+  transition: 0.3s;
+  overflow: hidden;
+  white-space: nowrap; }
 
 .sidebar a {
   color: #333;
@@ -761,7 +767,7 @@ blockquote {
   background-color: #fbcaca;
   border-left: 5px solid #f56a6a; }
 
-.post-list {
+.post-lis {
   display: grid;
   grid-template-columns: 1fr; }
 
