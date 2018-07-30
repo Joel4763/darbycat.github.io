@@ -5,12 +5,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff6f00">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  <meta property="og:image:height" content="135">  
+  <meta property="og:image:width" content="258">  
+  <meta property="og:title" content="Darby Computer and Technology Club">  
+  <meta property="og:description" content="Explore tech with other smart people at   Darby.">
+  <meta property="og:url" content="https://darbycat.github.io">
+  <meta property="og:image" content="https://darbycat.github.io/facebookopengraph.png  /og-image.jpg">
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,400i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
-<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>DarbyCAT</title>
   <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
@@ -41,6 +57,8 @@
                     
                 
                     
+                <li><a href="/">Home</a></li>
+                    
                 
                     
                 <li><a href="/macandcheese/">Macaroni and Cheese</a></li>
@@ -56,7 +74,7 @@
             <h2>News</h2>
             <ul>
                 
-                <li class="news">BREAKING NEWS: PIZZA IS GOOD</li>
+                <li class="news">Meeting today in room 2062, not room 162! Meeting will be in normal location next time.</li>
                 
                 <li class="news">yee</li>
                 
@@ -168,14 +186,14 @@
       }
 
       function open() {
-        document.getElementsByClassName('sidebar')[0].style = "opacity: 1; width: 27rem; min-width: 27rem;";
+        document.getElementsByClassName('sidebar')[0].style = "opacity: 1; width: 27rem; max-width: 100%;";
       }
 
       function close(transition) {
         if (transition) {
-          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; width: 0; min-width: 0; padding: 0;";
+          document.getElementsByClassName('sidebar')[0].style = "width: 27rem; max-width: 0; padding: 2em 0;";
         } else {
-          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; width: 0; min-width: 0; padding: 0; transition: 0s;";
+          document.getElementsByClassName('sidebar')[0].style = "width: 27rem; max-width: 0; padding: 2em 0;";
         }
       }
 

@@ -6,14 +6,22 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-<<<<<<< HEAD
-    <pubDate>Mon, 30 Jul 2018 08:32:05 -0400</pubDate>
-    <lastBuildDate>Mon, 30 Jul 2018 08:32:05 -0400</lastBuildDate>
-=======
-    <pubDate>Sun, 29 Jul 2018 22:40:11 -0400</pubDate>
-    <lastBuildDate>Sun, 29 Jul 2018 22:40:11 -0400</lastBuildDate>
->>>>>>> 11faedc3722e36f6f8583140fe87a58ceea5db04
+    <pubDate>Mon, 30 Jul 2018 18:54:36 -0400</pubDate>
+    <lastBuildDate>Mon, 30 Jul 2018 18:54:36 -0400</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Yay future publish date works</title>
+        <description>&lt;p&gt;If this shows up, it means you can set publish date.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 30 Jul 2018 18:00:20 -0400</pubDate>
+        <link>http://yourdomain.com/testing/2018/07/30/test-future.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/testing/2018/07/30/test-future.html</guid>
+        
+        
+        <category>testing</category>
+        
+      </item>
     
       <item>
         <title>Lots of Pepperoni</title>

@@ -80,9 +80,10 @@ body {
 
 a:hover {
     color: #ff4d4d;
+    text-decoration-color: #ff4d4d;
 }
 
-a::after {
+/*a::after {
     content: '';
     display: block;
     height: 2px;
@@ -95,16 +96,16 @@ a:hover::after {
     width: 100%;
     background: #ff4d4d;
 }
-
+*/
 .sidebar {
     background-color: #fbfbfb;
     padding: 2em;
     height: 100%;
     width: $sidebar-width;
-    min-width: $sidebar-width;
-    transition: 0.3s;
+    max-width: 100%;
+    transition: 0.3s ease-out;
     overflow: hidden;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 
 .sidebar a {
@@ -154,9 +155,9 @@ ul, ol {
 
 a {
     color: #ff6f00;
-    text-decoration: none;
-    display: inline-block;
-    transition: .2s color;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: color .2s, text-decoration-color .2s;
     
 }
 
@@ -199,7 +200,7 @@ blockquote {
     border-left: 5px solid #f56a6a;
 }
 
-.post-lis {
+.post-list {
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -249,15 +250,21 @@ input[type=text], input[type=url]{
     width: 100%;
 }
 
-input[type=submit]{
+input[type=submit], .button{
     border-radius: 5px;
     background: transparent;
     border: 2px solid #ff4d4d;
     transition: .5s background-color;
+    text-decoration: none;
+    color: initial;
+    padding: .25rem;
+    cursor: pointer;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover, .button:hover{
     background-color: #ff4d4d;
+    text-decoration: none;
+    color: initial;
 }
 
 .CodeMirror-wrap{

@@ -669,29 +669,32 @@ body {
   height: 100%; }
 
 a:hover {
-  color: #ff4d4d; }
+  color: #ff4d4d;
+  text-decoration-color: #ff4d4d; }
 
-a::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 0;
-  background: transparent;
-  transition: .2s background-color ease-out, .2s width ease-out; }
+/*a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: .2s background-color ease-out, .2s width ease-out;
+}
 
 a:hover::after {
-  width: 100%;
-  background: #ff4d4d; }
-
+    width: 100%;
+    background: #ff4d4d;
+}
+*/
 .sidebar {
   background-color: #fbfbfb;
   padding: 2em;
   height: 100%;
   width: 27rem;
-  min-width: 27rem;
-  transition: 0.3s;
+  max-width: 100%;
+  transition: 0.3s ease-out;
   overflow: hidden;
-  white-space: nowrap; }
+  /*white-space: nowrap;*/ }
 
 .sidebar a {
   color: #333;
@@ -731,9 +734,9 @@ ul, ol {
 
 a {
   color: #ff6f00;
-  text-decoration: none;
-  display: inline-block;
-  transition: .2s color; }
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: color .2s, text-decoration-color .2s; }
 
 .title {
   font-size: 3em;
@@ -767,7 +770,7 @@ blockquote {
   background-color: #fbcaca;
   border-left: 5px solid #f56a6a; }
 
-.post-lis {
+.post-list {
   display: grid;
   grid-template-columns: 1fr; }
 
@@ -806,14 +809,20 @@ input[type=text], input[type=url] {
   padding: .25rem .5rem;
   width: 100%; }
 
-input[type=submit] {
+input[type=submit], .button {
   border-radius: 5px;
   background: transparent;
   border: 2px solid #ff4d4d;
-  transition: .5s background-color; }
+  transition: .5s background-color;
+  text-decoration: none;
+  color: initial;
+  padding: .25rem;
+  cursor: pointer; }
 
-input[type=submit]:hover {
-  background-color: #ff4d4d; }
+input[type=submit]:hover, .button:hover {
+  background-color: #ff4d4d;
+  text-decoration: none;
+  color: initial; }
 
 .CodeMirror-wrap {
   cursor: text; }

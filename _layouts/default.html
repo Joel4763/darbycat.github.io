@@ -26,14 +26,14 @@
       }
 
       function open() {
-        document.getElementsByClassName('sidebar')[0].style = "opacity: 1; width: 27rem; min-width: 27rem;";
+        document.getElementsByClassName('sidebar')[0].style = "opacity: 1; width: 27rem; max-width: 100%;";
       }
 
       function close(transition) {
         if (transition) {
-          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; width: 0; min-width: 0; padding: 0;";
+          document.getElementsByClassName('sidebar')[0].style = "width: 27rem; max-width: 0; padding: 2em 0;";
         } else {
-          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; width: 0; min-width: 0; padding: 0; transition: 0s;";
+          document.getElementsByClassName('sidebar')[0].style = "width: 27rem; max-width: 0; padding: 2em 0;";
         }
       }
 
