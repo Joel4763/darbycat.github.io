@@ -204,7 +204,45 @@ h2 {
 blockquote{
     padding: .5px;
     padding-left: .5rem;
-    margin-left: .5rem;
+    margin: 1rem 0;
     background-color: lighten(#f56a6a, 20%);
     border-left: 5px solid #f56a6a;
+}
+
+.post-list{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.post-list > li{
+    display: block;
+    list-style: none;
+    padding: 0 5px;
+    margin: 10px;
+    border-left: 2px solid #f56a6a;
+}
+
+.post-meta{
+    font-style: italic;
+}
+
+.post-link{
+    display: block;
+}
+
+@media screen and (min-width: 890px) {
+    .post-list{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.highlight{
+    padding: .5rem 1rem;
+    margin: 0;
+    border: 1px solid #bbb;
+}
+
+code{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
 }

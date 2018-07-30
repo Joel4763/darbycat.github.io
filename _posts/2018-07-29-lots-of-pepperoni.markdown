@@ -1,23 +1,10 @@
 ---
-layout: page
-title: Macaroni and Cheese
-permalink: /macandcheese/
+layout: post
+title:  "Lots of Pepperoni"
+date:   2018-07-29 18:00:20 -0400
+categories: memes are good
 ---
-
-This is another page. This time, more lipsum!
-
-# Tumida quod
-
-## Moraque et est ea formamque colubrasque voluit
-
-Lorem markdownum nata spargimur ut omina utroque impediebat resedit sollicitis
-deus, deas Nesse latratibus. Modo finita ecce nam: sacrilegi origine facit.
-Solvit **Iuno sonanti trepidare** contraria circum spectabilis Iovis sentibus
-ense; et [quam](http://in.com/non) habebam formidine ea manu pallorque frustra.
-
-1. Fameque detegit Capaneusque natam egrediturque
-2. Vulgus in visum faciemque est locis infans
-3. Omnia una recursus sit non bis hosti
+I am getting tired of lipsum at this point.
 
 ## Leti resistite tamen conplexaque pontus caede ex
 
