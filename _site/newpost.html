@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>DarbyCAT</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://yourdomain.com/newpost">
+  <link rel="alternate" type="application/rss+xml" title="DarbyCAT" href="http://yourdomain.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <body>
+    <div class="nav-button">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="wrapper">
+    <div class="sidebar">
+
+        <nav class="menu">
+            <h2>Menu</h2>
+            <ul>
+                
+                    
+                <li><a href="/about/">About</a></li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                <li><a href="/macandcheese/">Macaroni and Cheese</a></li>
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+
+            <br /><br />
+            <h2>News</h2>
+            <ul>
+                
+                <li class="news">Pizza tastes bien</li>
+                
+                <li class="news">Memes are mucho</li>
+                
+            </ul>
+        </nav>
+    </div>
+
+   
+
+    <article class="content">
+    <a class="site-title" href="/"><h2>DarbyCAT</h2></a>
+        <style type="text/css">
+#github-logout-warning > div{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#github-logout-warning{
+	margin-bottom: 1rem;
+	background-color: #e5acac;
+	width: 100%;
+	padding: .5rem;
+}
+</style>
+<div id="github-logout-warning" style="display: none;">
+	<div>
+		<div>
+			<i class="fas fa-exclamation-triangle" style="font-size: 200%; float: left; padding-right: 10px; height: 100%; vertical-align: center;"></i>
+		</div>
+		<div>
+
+			<strong>You are not logged in to GitHub.</strong><br>
+			You will need to <a href="https://github.com/login" target="_blank">log in</a> or <a href="https://github.com/join" target="_blank">sign up</a> in order to post.<br>
+		</div>
+	</div>
+	<small>(Ignore this warning if you have an ad blocker or similar extension blocking us from seeing you're logged in.)</small>
+</div>
+
+<form name="postdetails" action="#" onsubmit="return form_submitted();">
+	<input id="posttitle" type="text" placeholder="Title"></text><br>
+	<input id="postcatagories" type="text" placeholder="Catagory"></text><br>
+	<input id="postfile" type="url" placeholder="URL to attachment"></text><br>
+
+	<textarea id="newpost"></textarea>
+	<input type="submit" name="submit" value="Create post">
+</form>
+
+<br>
+<p>If you are not on officer in DarbyCAT, you will have to make a pull request for your post to be reviewed before publishing.</p>
+<p>When you click "create post", it should take you to this page:</p>
+<a href="/assets/img/branch.png" data-fancybox><img src="/assets/img/branch.png" alt="You need to fork this repository to make changes"></a>
+<p>Click "fork this repository and make changes."</p>
+<a href="/assets/img/commit.png" data-fancybox><img src="/assets/img/commit.png" alt="Propose new file"></a>
+<p>Next click propose new file. <small>Hint: if it's grayed out, type something into the file contents and delete it.</small></p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+<script>
+	var simplemde = new SimpleMDE({ element: $("#newpost")[0], showIcons: ["code", "table"], placeholder: "Post content"});
+	function github_detect() {
+		var img = document.createElement('img');
+		img.src = 'https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Ffavicon.ico%3Fid%3D1';
+		img.onerror = function() {
+			document.getElementById('github-logout-warning').style.display = 'inline-block';
+		};
+	}
+	github_detect();
+
+	function form_submitted() {
+		var postdata = '---\nlayout: post\ntitle: ';
+		postdata += JSON.stringify($('#posttitle').val());
+		postdata += '\ndate: ';
+		postdata += moment(new Date()).format('YYYY-MM-DD HH:mm:ss ZZ');
+		postdata += '\ncategories: ';
+		postdata += $('#postcatagories').val();
+  // postdata += '\nauthor: ';
+  // postdata += $('#postauthor').val();
+  postdata += '\nfilename: ';
+  postdata += $('#postfile').val();
+  postdata += '\n---\n';
+  postdata += simplemde.value();
+  var filename = '_posts/' + moment(new Date()).format('YYYY-MM-DD-') + $('#posttitle').val().replace(/[^a-zA-Z0-9]/g, '-') + ".markdown";
+  var message = 'Create new post: "' + $('#posttitle').val().replace(/[^a-zA-Z0-9]/g, '-') + '"';
+  var description = '\n\nCommited using the New Post tool on the website.';
+  var url = 'https://github.com/darbycat/new-site/new/master?filename=' + encodeURIComponent(filename) + '&value=' + encodeURIComponent(postdata) + '&message='  + encodeURIComponent(message) + '&description=' + encodeURIComponent(description);
+  window.location.href = url;
+  // console.log(url);
+  // stops the page from reloading afterwards
+  return false;
+}
+</script>
+
+    </article>
+
+            </div>
+    <!-- <script>$("a:not( [href*='yourdomain.com'] ):not( [href^='#'] ):not( [href^='/'] )").append(' <i class="fas fa-external-link-alt"></i>');</script> -->
+    <!-- WE WILL DO THIS LATER! We need to get it working betters -->
+    </div>
+    </body>
+</html>
+
+  </body>
+
+</html>
