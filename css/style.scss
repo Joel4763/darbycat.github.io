@@ -26,7 +26,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    800px;
-$sidebar-width:    27rem;
+$sidebar-width:    27rem; // Also change in the javascript "default.html"
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -57,7 +57,7 @@ body {
     text-transform: initial !important;
 }
 
-.nav-button{
+.nav-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,9 +65,12 @@ body {
     color: white;
     width: 2rem;
     height: 2rem;
+    border: solid 2px #ff6f00;
+    outline: none;
+    margin: 1em 0 0 1em;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     padding: 2em;
     margin: 0;
@@ -78,7 +81,8 @@ body {
 a:hover {
     color: #ff4d4d;
 }
-a::after{
+
+a::after {
     content: '';
     display: block;
     height: 2px;
@@ -86,25 +90,30 @@ a::after{
     background: transparent;
     transition: .2s background-color ease-out, .2s width ease-out;
 }
-a:hover::after{
+
+a:hover::after {
     width: 100%;
     background: #ff4d4d;
 }
+
 .sidebar {
     background-color: #fbfbfb;
     padding: 2em;
     height: 100%;
     width: $sidebar-width;
     min-width: $sidebar-width;
+    transition: 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.sidebar a{
+.sidebar a {
     color: #333;
     width: 100%;
     transition: .2s color;
 }
 
-.sidebar a:hover{
+.sidebar a:hover {
     color: #ff4d4d;
 }
 
@@ -151,19 +160,19 @@ a {
     
 }
 
-.title{
+.title {
     font-size: 3em;
     font-weight: bold;
     color: #222;
 }
 
-h1{
+h1 {
     font-size: 2em;       
     font-weight: normal;
     color: #222;
 }
 
-.content ul, .content ol{
+.content ul, .content ol {
     padding-left: 2rem;
 }
 
@@ -173,7 +182,7 @@ h2 {
     border-bottom: solid 3px #f56a6a;
 }
 
-.site-title{
+.site-title {
     color: #222;
     display: inline;
     text-decoration: none;
@@ -182,7 +191,7 @@ h2 {
     }
 }
 
-blockquote{
+blockquote {
     padding: .5px;
     padding-left: .5rem;
     margin: 1rem 0;
@@ -190,12 +199,12 @@ blockquote{
     border-left: 5px solid #f56a6a;
 }
 
-.post-list{
+.post-lis {
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.post-list > li{
+.post-list > li {
     display: block;
     list-style: none;
     padding: 0 5px;
@@ -203,11 +212,11 @@ blockquote{
     border-left: 2px solid #f56a6a;
 }
 
-.post-meta{
+.post-meta {
     font-style: italic;
 }
 
-.post-link{
+.post-link {
     display: block;
 }
 
@@ -217,13 +226,13 @@ blockquote{
     }
 }
 
-.highlight{
+.highlight {
     padding: .5rem 1rem;
     margin: 0;
     border: 1px solid #bbb;
 }
 
-code{
+code {
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
 }

@@ -22,11 +22,11 @@
   <body>
 
     <body>
-    <div class="nav-button">
+    <button class="nav-button" onclick="toggleDrawer();">
         <i class="fas fa-bars"></i>
-    </div>
+    </button>
     <div class="wrapper">
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
 
         <nav class="menu">
             <h2>Menu</h2>
@@ -52,15 +52,15 @@
             <h2>News</h2>
             <ul>
                 
-                <li class="news">Pizza tastes bien</li>
+                <li class="news">BREAKING NEWS: PIZZA IS GOOD</li>
                 
-                <li class="news">Memes are mucho</li>
+                <li class="news">yee</li>
                 
             </ul>
         </nav>
     </div>
 
-   
+
 
     <article class="content">
     <a class="site-title" href="/"><h2>DarbyCAT</h2></a>
@@ -147,6 +147,62 @@ magno forma: quod viro negarit nocet ut quid?</p>
     </div>
     </body>
 </html>
+
+    <script>
+      var toggle;
+      var widthThreshold = 1000;
+
+      function toggleDrawer() {
+        if (toggle) open();
+        else close();
+
+        toggle = !toggle;
+      }
+
+      function open() {
+        document.getElementsByClassName('sidebar')[0].style = "opacity: 1; width: 27rem; min-width: 27rem;";
+      }
+
+      function close(transition) {
+        if (transition) {
+          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; width: 0; min-width: 0; padding: 0;";
+        } else {
+          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; width: 0; min-width: 0; padding: 0; transition: 0s;";
+        }
+      }
+
+
+      if (window.innerWidth < widthThreshold) {
+        close(false);
+        toggle = true;
+      } else {
+        open();
+        toggle = false;
+      }
+
+
+      if (window.attachEvent) {
+        window.attachEvent('onresize', function() {
+          if (window.innerWidth < widthThreshold) {
+            close(true);
+            toggle = true;
+          } else {
+            open();
+            toggle = false;
+          }
+        });
+      } else if (window.addEventListener) {
+        window.addEventListener('resize', function() {
+          if (window.innerWidth < widthThreshold) {
+            close(true);
+            toggle = true;
+          } else {
+            open();
+            toggle = false;
+          }
+        }, true);
+      }
+    </script>
 
   </body>
 
