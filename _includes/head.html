@@ -34,4 +34,66 @@
   <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <script>
+      var toggle;
+
+      function toggleDrawer(transition, setCookiee) {
+        if (window.innerWidth <= 450) {
+          toggle = true;
+        }
+
+        if (toggle) open(setCookiee);
+        else close(transition, setCookiee);
+
+        toggle = !toggle;
+        console.log(toggle);
+      }
+
+      function open(setCookiee) {
+        try { document.getElementsByClassName('sidebar')[0].style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; /*max-width: 50%;*/ transition: 0.3s ease-out; overflow: hidden; /*white-space: nowrap;*/"; } catch { }
+        if (setCookiee) setCookie("open", true, 1.5);
+      }
+
+      function close(transition, setCookiee) {
+        if (transition) {
+          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important;";
+        } else {
+          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
+        }
+
+        if (setCookiee) setCookie("open", false, 1.5);
+      }
+
+      function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 1000 * 60 * 60));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+
+      return "";
+    }
+
+    function checkCookie() {
+      var open = getCookie("open");
+
+      if (open == 'false') toggleDrawer(false, true);
+    }
+
+    </script>
 </head>

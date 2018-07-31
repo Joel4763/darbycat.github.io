@@ -14,62 +14,6 @@
 
     {% include footer.html %}
 
-    <script>
-      var toggle;
-      var widthThreshold = 1000;
-
-      function toggleDrawer() {
-        if (toggle) open();
-        else close();
-
-        toggle = !toggle;
-      }
-
-      function open() {
-        document.getElementsByClassName('sidebar')[0].style = "opacity: 1; width: 27rem; max-width: 100%;";
-      }
-
-      function close(transition) {
-        if (transition) {
-          document.getElementsByClassName('sidebar')[0].style = "width: 27rem; max-width: 0; padding: 2em 0;";
-        } else {
-          document.getElementsByClassName('sidebar')[0].style = "width: 27rem; max-width: 0; padding: 2em 0;";
-        }
-      }
-
-
-      if (window.innerWidth < widthThreshold) {
-        close(false);
-        toggle = true;
-      } else {
-        open();
-        toggle = false;
-      }
-
-
-      if (window.attachEvent) {
-        window.attachEvent('onresize', function() {
-          if (window.innerWidth < widthThreshold) {
-            close(true);
-            toggle = true;
-          } else {
-            open();
-            toggle = false;
-          }
-        });
-      } else if (window.addEventListener) {
-        window.addEventListener('resize', function() {
-          if (window.innerWidth < widthThreshold) {
-            close(true);
-            toggle = true;
-          } else {
-            open();
-            toggle = false;
-          }
-        }, true);
-      }
-    </script>
-
   </body>
 
 </html>
