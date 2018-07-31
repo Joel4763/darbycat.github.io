@@ -4,10 +4,10 @@
     <title>DarbyCAT</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 Jul 2018 11:32:00 -0400</pubDate>
-    <lastBuildDate>Tue, 31 Jul 2018 11:32:00 -0400</lastBuildDate>
+    <link>https://darbycat.github.io/new-site/</link>
+    <atom:link href="https://darbycat.github.io/new-site/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 31 Jul 2018 11:44:53 -0400</pubDate>
+    <lastBuildDate>Tue, 31 Jul 2018 11:44:53 -0400</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -15,8 +15,8 @@
         <description>&lt;p&gt;If this shows up, it means you can set publish date.&lt;/p&gt;
 </description>
         <pubDate>Mon, 30 Jul 2018 18:00:20 -0400</pubDate>
-        <link>http://yourdomain.com/testing/2018/07/30/test-future.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/testing/2018/07/30/test-future.html</guid>
+        <link>https://darbycat.github.io/new-site/testing/2018/07/30/test-future.html</link>
+        <guid isPermaLink="true">https://darbycat.github.io/new-site/testing/2018/07/30/test-future.html</guid>
         
         
         <category>testing</category>
@@ -76,8 +76,8 @@ et &lt;a href=&quot;http://hosamplectitur.io/sua&quot;&gt;ausa clausum&lt;/a&gt;
 magno forma: quod viro negarit nocet ut quid?&lt;/p&gt;
 </description>
         <pubDate>Sun, 29 Jul 2018 18:00:20 -0400</pubDate>
-        <link>http://yourdomain.com/memes/are/good/2018/07/29/lots-of-pepperoni.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/memes/are/good/2018/07/29/lots-of-pepperoni.html</guid>
+        <link>https://darbycat.github.io/new-site/memes/are/good/2018/07/29/lots-of-pepperoni.html</link>
+        <guid isPermaLink="true">https://darbycat.github.io/new-site/memes/are/good/2018/07/29/lots-of-pepperoni.html</guid>
         
         
         <category>memes</category>
@@ -106,8 +106,8 @@ magno forma: quod viro negarit nocet ut quid?&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 28 Jul 2018 18:00:20 -0400</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2018/07/28/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2018/07/28/welcome-to-jekyll.html</guid>
+        <link>https://darbycat.github.io/new-site/jekyll/update/2018/07/28/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">https://darbycat.github.io/new-site/jekyll/update/2018/07/28/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
@@ -168,8 +168,8 @@ quid: pleno unum, flebilis dependent draconibus dixerat! Casus e nimis maerens&l
 mihi pressus amans tua, una viri veniat.&lt;/p&gt;
 </description>
         <pubDate>Thu, 31 May 2018 18:00:20 -0400</pubDate>
-        <link>http://yourdomain.com/pepperoni/pizza/2018/05/31/filler-text.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/pepperoni/pizza/2018/05/31/filler-text.html</guid>
+        <link>https://darbycat.github.io/new-site/pepperoni/pizza/2018/05/31/filler-text.html</link>
+        <guid isPermaLink="true">https://darbycat.github.io/new-site/pepperoni/pizza/2018/05/31/filler-text.html</guid>
         
         
         <category>pepperoni</category>
