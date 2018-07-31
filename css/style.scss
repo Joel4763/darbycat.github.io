@@ -139,7 +139,7 @@ ul, ol {
     padding: 0;
 }
 
-.menu > ul > li {
+.menu li {
     text-transform: uppercase;
     font-family: "Roboto Slab", serif;
     border-top: solid 1px rgb(200, 200, 200);
@@ -149,7 +149,7 @@ ul, ol {
     padding: 0.75em 1em;
 }
 
-.menu > ul > li:first-child {
+.menu ul > li:first-child {
     border-top: 0;
 }
 
