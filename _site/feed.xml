@@ -6,8 +6,13 @@
 </description>
     <link>https://darbycat.github.io/new-site/</link>
     <atom:link href="https://darbycat.github.io/new-site/feed.xml" rel="self" type="application/rss+xml"/>
+<<<<<<< HEAD
     <pubDate>Tue, 31 Jul 2018 12:56:01 -0400</pubDate>
     <lastBuildDate>Tue, 31 Jul 2018 12:56:01 -0400</lastBuildDate>
+=======
+    <pubDate>Tue, 31 Jul 2018 13:33:29 -0400</pubDate>
+    <lastBuildDate>Tue, 31 Jul 2018 13:33:29 -0400</lastBuildDate>
+>>>>>>> c324764c4666f5e39f3fcbe7bfe6bb8ea025412e
     <generator>Jekyll v3.0.1</generator>
     
       <item>
