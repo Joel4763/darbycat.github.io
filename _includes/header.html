@@ -11,7 +11,7 @@
             <nav>
             <h2>Menu</h2>
             <ul>
-                <li><a href="{{ site.baseurl }}">Home</a></li> 
+                <li><a href="{{ site.baseurl }}/">Home</a></li> 
                 {% for my_page in site.pages %}
                     {% if my_page.title %}
                 <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
