@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: DarbyCAT
+title: DarbyCATe
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Explore technology with other smart people at Darby High School.
+  Explore computers and technology with your peers at Darby High School.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://darbycat.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
