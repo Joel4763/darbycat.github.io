@@ -11,6 +11,7 @@
             <nav>
             <h2>Menu</h2>
             <ul>
+                <li><a href="{{ site.baseurl }}/">Home</a></li> 
                 {% for my_page in site.pages %}
                     {% if my_page.title %}
                 <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
@@ -26,11 +27,17 @@
                 {% endfor %}
             </ul>
         </div>
+        <br><br>
         <div class="visit">
         <b>Visit us:</b><br>
         <span style="vertical-align: bottom;">
         <a href="https://github.com/DarbyCAT"><i class="fab fa-github-square fa-2x"></i></a> <a href="https://github.com/DarbyCAT"><i class="fab fa-twitter-square fa-2x"></i></a> <a href="https://github.com/DarbyCAT"><i class="fab fa-discord fa-2x"></i></a>
-    </span>
+
+        </span>
+        <br><br>
+        <small style="font-size: .75rem; line-height: .1rem;">
+    This is not an official web site of the Hilliard City School District. The Hilliard City School District does not control and cannot guarantee the relevance, timeliness, or accuracy of the information on this web site. Any views or opinions expressed herein are solely those of the creators of this web site.
+        </small>
         </div>
     </div>
 
