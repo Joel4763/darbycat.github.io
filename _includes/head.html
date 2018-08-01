@@ -38,36 +38,47 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   <script>
-      var toggle;
+      var toggle = false;
 
-      function toggleDrawer(transition, setCookiee) {
-        if (window.innerWidth <= 450) {
-          toggle = true;
-        }
-
-        if (toggle) open(setCookiee);
-        else close(transition, setCookiee);
+      function toggleDrawer(transition, setData) {
+        if (toggle) open(setData);
+        else close(transition, setData);
 
         toggle = !toggle;
-        console.log(toggle);
       }
 
-      function open(setCookiee) {
-        try { document.getElementsByClassName('sidebar')[0].style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; /*max-width: 50%;*/ transition: 0.3s ease-out; overflow: hidden; /*white-space: nowrap;*/"; } catch { }
-        if (setCookiee) setCookie("open", true, 1.5);
+      function open(setData) {
+        //try {
+          if (window.innerWidth <= 450) {
+            document.getElementsByClassName('sidebar')[0].style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 100% !important; min-width: 100% !important; transition: 0.3s ease-out; overflow: hidden; opacity: 1 !important;";
+            document.getElementsByClassName('content')[0].style = "width: 0; position: absolute; overflow: hidden;";
+            //$('.sidebar').style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 100% !important; min-width: 100% !important; transition: 0.3s ease-out; overflow: hidden; opacity: 1 !important;";
+            //$('.content').style = "width: 0; position: absolute; overflow: hidden;";
+          } else {
+            document.getElementsByClassName('sidebar')[0].style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; transition: 0.3s ease-out; overflow: hidden;";
+            //$('.sidebar').style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; transition: 0.3s ease-out; overflow: hidden;";
+          }
+        //} catch { }
+        if (setData) sessionStorage.setItem("close", false);
       }
 
-      function close(transition, setCookiee) {
+      function close(transition, setData) {
         if (transition) {
           document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important;";
+          document.getElementsByClassName('content')[0].style = "width: 70%; position: relative; overflow: auto;";
+          //$('.sidebar').style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important;";
+          //$('.content').style = "width: 70%; position: relative; overflow: auto;";
         } else {
           document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
+          try { document.getElementsByClassName('content')[0].style = "width: 70%; position: relative; overflow: auto;"; } catch { }
+          //$('.sidebar').style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
+          //$('.content').style = "width: 70%; position: relative; overflow: auto;";
         }
 
-        if (setCookiee) setCookie("open", false, 1.5);
+        if (setData) sessionStorage.setItem("close", true);
       }
 
-      function setCookie(cname, cvalue, exdays) {
+      /*function setCookie(cname, cvalue, exdays) {
         var d = new Date();
         d.setTime(d.getTime() + (exdays * 1000 * 60 * 60));
         var expires = "expires="+ d.toUTCString();
@@ -78,7 +89,7 @@
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
         var ca = decodedCookie.split(';');
-        for(var i = 0; i <ca.length; i++) {
+        for(var i = 0; i < ca.length; i++) {
           var c = ca[i];
           while (c.charAt(0) == ' ') {
             c = c.substring(1);
@@ -93,9 +104,45 @@
 
     function checkCookie() {
       var open = getCookie("open");
+      console.log(open == 'false');
 
-      if (open == 'false') toggleDrawer(false, true);
+      if (open != 'false') { 
+        
+        //toggleDrawer(false, true);
+        toggle = true;
+      }
+
+      resizeStuff();
+    }*/
+
+    function onLoad() {
+      var data = sessionStorage.getItem("close");
+      if (data == 'true') {
+        toggleDrawer(false, true);
+        console.log("toggled");
+      }
+
+      console.log("onload");
+
+      resizeStuff();
     }
 
+    function doOnOrientationChange() {
+      resizeStuff(window.orientation);
+    }
+  
+    window.addEventListener('orientationchange', doOnOrientationChange);
+  
+
+    function resizeStuff(orientation) {
+      //if (window.innerWidth <= 450) {
+      if (orientation === 0) {
+        toggle = true;
+        document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
+        document.getElementsByClassName('content')[0].style = "width: 70%; position: relative; overflow: auto;";
+      }
+      //}
+    }
+    
     </script>
 </head>

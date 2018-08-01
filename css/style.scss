@@ -115,7 +115,7 @@ a:hover::after {
         min-width: 30% !important;
     }
 
-    .menu > ul > li {
+    .menu li {
         font-size: 11pt !important;
     }
 }
@@ -126,12 +126,12 @@ a:hover::after {
         min-width: 30% !important;
     }
 
-    .menu > ul > li {
-        font-size: 9pt !important;
+    .menu li {
+        font-size: 10pt !important;
     }
 
     body {
-        font-size: 9pt !important;
+        font-size: 10pt !important;
     }
 
     .content {
@@ -140,15 +140,12 @@ a:hover::after {
 }
 
 @media only screen and (max-width: 450px) {
-    .sidebar {
-        opacity: 0;
-        padding: 0 !important; 
-        width: 0 !important;
-        min-width: 0 !important;
-    }
-
     body {
         font-size: 10pt !important;
+    }
+
+    .menu li {
+        font-size: 9pt !important;
     }
 }
 
