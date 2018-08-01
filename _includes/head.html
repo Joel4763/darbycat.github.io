@@ -39,6 +39,10 @@
 
   <script>
       var toggle = false;
+      var openContent = "width: 70%; position: relative; overflow: auto;";
+      var closeSidebar = "opacity: 0; padding: 2.5% 0; width: 0 !important; min-width: 0 !important;";
+      var sidebar;
+      var content;
 
       function toggleDrawer(transition, setData) {
         if (toggle) open(setData);
@@ -48,83 +52,37 @@
       }
 
       function open(setData) {
-        //try {
           if (window.innerWidth <= 450) {
-            document.getElementsByClassName('sidebar')[0].style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 100% !important; min-width: 100% !important; transition: 0.3s ease-out; overflow: hidden; opacity: 1 !important;";
-            document.getElementsByClassName('content')[0].style = "width: 0; position: absolute; overflow: hidden;";
-            //$('.sidebar').style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 100% !important; min-width: 100% !important; transition: 0.3s ease-out; overflow: hidden; opacity: 1 !important;";
-            //$('.content').style = "width: 0; position: absolute; overflow: hidden;";
+            sidebar.style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 100% !important; min-width: 100% !important; transition: 0.3s ease-out; overflow: hidden; opacity: 1 !important;";
+            content.style = "width: 0; position: absolute; overflow: hidden;";
           } else {
-            document.getElementsByClassName('sidebar')[0].style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; transition: 0.3s ease-out; overflow: hidden;";
-            //$('.sidebar').style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; transition: 0.3s ease-out; overflow: hidden;";
+            sidebar.style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; transition: 0.3s ease-out; overflow: hidden;";
           }
-        //} catch { }
         if (setData) sessionStorage.setItem("close", false);
       }
 
       function close(transition, setData) {
         if (transition) {
-          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important;";
-          document.getElementsByClassName('content')[0].style = "width: 70%; position: relative; overflow: auto;";
-          //$('.sidebar').style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important;";
-          //$('.content').style = "width: 70%; position: relative; overflow: auto;";
+          sidebar.style = closeSidebar;
+          content.style = openContent;
         } else {
-          document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
-          try { document.getElementsByClassName('content')[0].style = "width: 70%; position: relative; overflow: auto;"; } catch { }
-          //$('.sidebar').style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
-          //$('.content').style = "width: 70%; position: relative; overflow: auto;";
+          sidebar.style = closeSidebar + "transition: 0s;";
+          content.style = openContent;
         }
 
         if (setData) sessionStorage.setItem("close", true);
       }
 
-      /*function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays * 1000 * 60 * 60));
-        var expires = "expires="+ d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-      }
-
-      function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-          var c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-
-      return "";
-    }
-
-    function checkCookie() {
-      var open = getCookie("open");
-      console.log(open == 'false');
-
-      if (open != 'false') { 
-        
-        //toggleDrawer(false, true);
-        toggle = true;
-      }
-
-      resizeStuff();
-    }*/
-
     function onLoad() {
+      sidebar = document.getElementsByClassName('sidebar')[0];
+      content = document.getElementsByClassName('content')[0];
+
       var data = sessionStorage.getItem("close");
       if (data == 'true') {
         toggleDrawer(false, true);
-        console.log("toggled");
       }
 
-      console.log("onload");
-
-      resizeStuff();
+      resizeStuff(69);
     }
 
     function doOnOrientationChange() {
@@ -135,13 +93,11 @@
   
 
     function resizeStuff(orientation) {
-      //if (window.innerWidth <= 450) {
-      if (orientation === 0) {
+      if (orientation === 0 || window.innerWidth <= 450) {
         toggle = true;
-        document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
-        document.getElementsByClassName('content')[0].style = "width: 70%; position: relative; overflow: auto;";
+        sidebar.style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
+        content.style = "width: 70%; position: relative; overflow: auto;";
       }
-      //}
     }
     
     </script>
