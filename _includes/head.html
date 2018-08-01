@@ -41,10 +41,6 @@
       var toggle;
 
       function toggleDrawer(transition, setCookiee) {
-        if (window.innerWidth <= 450) {
-          toggle = true;
-        }
-
         if (toggle) open(setCookiee);
         else close(transition, setCookiee);
 
@@ -52,16 +48,36 @@
         console.log(toggle);
       }
 
+      /*
+        opacity: 0;
+        padding: 0; //!important; 
+        width: 0; //!important;
+        min-width: 0; //!important;
+
+      */
+
+
+
+
       function open(setCookiee) {
-        try { document.getElementsByClassName('sidebar')[0].style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; /*max-width: 50%;*/ transition: 0.3s ease-out; overflow: hidden; /*white-space: nowrap;*/"; } catch { }
+        try {
+          if (window.innerWidth <= 450) {
+            document.getElementsByClassName('sidebar')[0].style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 100% !important; min-width: 100% !important; transition: 0.3s ease-out; overflow: hidden; opacity: 1 !important;";
+            document.getElementsByClassName('content')[0].style = "width: 0; position: absolute; overflow: hidden;";
+          } else {
+            document.getElementsByClassName('sidebar')[0].style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; transition: 0.3s ease-out; overflow: hidden;";
+          }
+        } catch { }
         if (setCookiee) setCookie("open", true, 1.5);
       }
 
       function close(transition, setCookiee) {
         if (transition) {
           document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important;";
+          document.getElementsByClassName('content')[0].style = "width: 70%; position: relative; overflow: auto;";
         } else {
           document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
+          document.getElementsByClassName('content')[0].style = "width: 70%; position: relative; overflow: auto;";
         }
 
         if (setCookiee) setCookie("open", false, 1.5);
@@ -95,7 +111,29 @@
       var open = getCookie("open");
 
       if (open == 'false') toggleDrawer(false, true);
+
+      resizeStuff();
     }
+
+    if (window.attachEvent) {
+        window.attachEvent('onresize', function() {
+          resizeStuff();
+        });
+      } else if (window.addEventListener) {
+        window.addEventListener('resize', function() {
+          resizeStuff();
+        }, true);
+      }
+
+      function resizeStuff() {
+        if (window.innerWidth <= 450) {
+          toggle = true;
+          try {
+            document.getElementsByClassName('sidebar')[0].style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
+            document.getElementsByClassName('content')[0].style = "width: 70%; position: relative; overflow: auto;";
+          } catch { }
+        }
+      }
 
     </script>
 </head>

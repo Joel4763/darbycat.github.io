@@ -140,13 +140,6 @@ a:hover::after {
 }
 
 @media only screen and (max-width: 450px) {
-    .sidebar {
-        opacity: 0;
-        padding: 0 !important; 
-        width: 0 !important;
-        min-width: 0 !important;
-    }
-
     body {
         font-size: 10pt !important;
     }
