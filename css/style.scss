@@ -99,20 +99,23 @@ a:hover::after {
 
 .sidebar {
     background-color: #fbfbfb;
-    padding: 2.5%;
+    /*padding: 2.5%;
+    
     height: 100%;
     width: 30%;
     min-width: 30%;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);*/
     /*max-width: 50%;*/
-    transition: 0.3s ease-out;
-    overflow: hidden;
+    
+    
+    /*overflow: hidden;*/
     /*white-space: nowrap;*/
 }
 
 @media only screen and (max-width: 1050px) {
     .sidebar {
-        width: 30% !important;
-        min-width: 30% !important;
+        width: 30%;
+        /*min-width: 30% !important;*/
     }
 
     .menu li {
@@ -122,8 +125,8 @@ a:hover::after {
 
 @media only screen and (max-width: 780px) {
     .sidebar {
-        width: 30% !important;
-        min-width: 30% !important;
+        width: 30%;
+        /*min-width: 30% !important;*/
     }
 
     .menu li {
