@@ -155,7 +155,7 @@ body {
 .sidebar a {
     color: #333;
     width: 100%;
-    transition: .2s color;
+    transition: .2s color, background-size 0.5s;
 }
 
 .sidebar a:hover {
@@ -211,24 +211,18 @@ ul, ol {
 
 a {
     text-decoration: none;
-    position: relative;
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 2px), #f56a6a calc(100% - 2px));
     color: #ff6f00;
-    display: inline;
-  }
-
-  a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    border-bottom: 2px solid #ff6f00;
-    transition: 0.4s;
-  }
-
-  a:hover:after {
-    width: 100%;
-  }
+    background-repeat: no-repeat;
+    //clip-path: polygon(100000% 0, 100000% 50%, 1000000% 2px, 100% 1000000%, 2px 0);
+    background-size: 0 100%;
+    transition: background-size 0.5s;
+}
+  
+a:hover {
+    background-size: 100% 100%;
+}
 
 .title {
     font-size: 3em;
