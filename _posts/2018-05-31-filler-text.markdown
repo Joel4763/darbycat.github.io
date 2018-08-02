@@ -2,6 +2,8 @@
 layout: post
 title:  "What is the meaning of life! ALso super long title"
 date:   2018-05-31 18:00:20 -0400
+attachment: https://example.com
+author: John Llama
 categories: pepperoni pizza
 ---
 # Prodit si licet adempto fulvis cum

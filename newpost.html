@@ -17,6 +17,7 @@ permalink: newpost
 	padding: .5rem;
 }
 </style>
+<h1>New Post</h1>
 <div id="github-logout-warning" style="display: none;">
 	<div>
 		<div>
@@ -32,10 +33,11 @@ permalink: newpost
 </div>
 
 <form name="postdetails" action="#" onsubmit="return form_submitted();">
-	<input id="posttitle" type="text" placeholder="Title"></text><br>
-	<input id="postcatagories" type="text" placeholder="Catagory"></text><br>
-	<input id="postfile" type="url" placeholder="URL to attachment"></text><br>
-
+	<input id="posttitle" type="text" placeholder="Title"><br>
+	<input id="postauthor" type="text" placeholder="Author"><br>
+	<input id="postcatagories" type="text" placeholder="Catagory"><br>
+	<input style="margin-bottom: 0;" id="postfile" type="url" placeholder="URL to attachment"><br>
+	<small>Must be a complete URL.</small>
 	<textarea id="newpost"></textarea>
 	<input type="submit" name="submit" value="Create post">
 </form>
@@ -43,9 +45,9 @@ permalink: newpost
 <br>
 <p>If you are not on officer in DarbyCAT, you will have to make a pull request for your post to be reviewed before publishing.</p>
 <p>When you click "create post", it should take you to this page:</p>
-<a href="/assets/img/branch.png" data-fancybox><img src="/assets/img/branch.png" alt="You need to fork this repository to make changes"></a>
+<img src="{{site.baseurl}}/assets/img/branch.png" alt="You need to fork this repository to make changes">
 <p>Click "fork this repository and make changes."</p>
-<a href="/assets/img/commit.png" data-fancybox><img src="/assets/img/commit.png" alt="Propose new file"></a>
+<img src="{{site.baseurl}}/assets/img/commit.png" alt="Propose new file">
 <p>Next click propose new file. <small>Hint: if it's grayed out, type something into the file contents and delete it.</small></p>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
 <script>
@@ -66,8 +68,8 @@ permalink: newpost
 		postdata += moment(new Date()).format('YYYY-MM-DD HH:mm:ss ZZ');
 		postdata += '\ncategories: ';
 		postdata += $('#postcatagories').val();
-  // postdata += '\nauthor: ';
-  // postdata += $('#postauthor').val();
+  postdata += '\nauthor: ';
+  postdata += $('#postauthor').val();
   postdata += '\nfilename: ';
   postdata += $('#postfile').val();
   postdata += '\n---\n';
