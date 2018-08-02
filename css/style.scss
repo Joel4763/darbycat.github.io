@@ -333,3 +333,7 @@ input[type=submit]:hover, .button:hover{
 .CodeMirror-wrap{
     cursor: text;
 }
+
+input[type=url]:invalid{
+    background-color: #ffdddd;
+}
