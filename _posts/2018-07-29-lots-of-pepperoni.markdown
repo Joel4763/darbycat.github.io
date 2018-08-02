@@ -8,9 +8,7 @@ I am getting tired of lipsum at this point.
 
 ## Leti resistite tamen conplexaque pontus caede ex
 
-Menoeten cui metu arte tuli quinque eundo arcanis spectantur in montibus
-temporis loqui monitisque? Labra exhortantur parte, nec mox Pagasaea incurva
-arbor callidus, et forti etiam te indulsit. Moenia inque [saxa
+Menoeten cui metu arte tuli quinque eundo arcanis spectantur in montibus temporis loqui monitisque? Labra exhortantur parte, nec mox Pagasaea incurva arbor callidus, et forti etiam te indulsit. Moenia inque [saxa
 modo](http://daturscopulis.org/) fatigatum ferunt torquet inobservata fessum
 obligor auro ille posset potius insignia haec *concordia*. Invecta tauros, magis
 nam postquam nostra, sidere, nec? Coeunt vitat efflant,
