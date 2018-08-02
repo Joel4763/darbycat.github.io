@@ -40,7 +40,8 @@
   <script>
       var toggle = false;
       var openContent = "width: 70%; position: relative; overflow: auto;";
-      var closeSidebar = "opacity: 0; padding: 2.5% 0; width: 0 !important; min-width: 0 !important;";
+      var closeSidebar = "transition: 0.2s ease-in 0.2s, clip-path 0.2s; clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); padding: 2.5% 0; width: 0; min-width: 0; overflow: hidden;";//"padding: 2.5% 0; width: 0; min-width: 0; overflow: hidden;";  // transition: 0.2s ease-in 0.2s, clip-path 0.2s; 
+      var openSidebar = "padding: 2.5%; height: 100%; overflow: hidden; transition: all 0.2s, clip-path 0.2s ease 0.2s; clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);";
       var sidebar;
       var content;
 
@@ -53,10 +54,10 @@
 
       function open(setData) {
           if (window.innerWidth <= 450) {
-            sidebar.style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 100% !important; min-width: 100% !important; transition: 0.3s ease-out; overflow: hidden; opacity: 1 !important;";
+            sidebar.style = openSidebar +  "width: 100%; min-width: 100%;";
             content.style = "width: 0; position: absolute; overflow: hidden;";
           } else {
-            sidebar.style = "background-color: #fbfbfb; padding: 2.5%; height: 100%; width: 30%; min-width: 30%; transition: 0.3s ease-out; overflow: hidden;";
+            sidebar.style = openSidebar +  "width: 30%; min-width: 30%;";
           }
         if (setData) sessionStorage.setItem("close", false);
       }
@@ -77,6 +78,13 @@
       sidebar = document.getElementsByClassName('sidebar')[0];
       content = document.getElementsByClassName('content')[0];
 
+      if (window.innerWidth <= 450) {
+        sidebar.style = openSidebar +  "width: 100%; min-width: 100%;";
+        content.style = "width: 0; min-width: 0; position: absolute; overflow: hidden;";
+      } else {
+        sidebar.style = openSidebar +  "width: 30%; min-width: 30%;";
+      }
+
       var data = sessionStorage.getItem("close");
       if (data == 'true') {
         toggleDrawer(false, true);
@@ -95,8 +103,8 @@
     function resizeStuff(orientation) {
       if (orientation === 0 || window.innerWidth <= 450) {
         toggle = true;
-        sidebar.style = "opacity: 0; padding: 0; width: 0 !important; min-width: 0 !important; transition: 0s;";
-        content.style = "width: 70%; position: relative; overflow: auto;";
+        sidebar.style = "opacity: 0; padding: 0; width: 0; min-width: 0; transition: 0s;";
+        content.style = openContent;
       }
     }
     
