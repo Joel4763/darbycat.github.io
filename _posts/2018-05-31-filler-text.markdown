@@ -43,6 +43,8 @@ auxilio sed [geminam iudice altius](http://deaenon.org/et-quoque.aspx)
 horrendaque nomine et volui frondes verba. Finemque remorata festum, singultibus
 rogant error ambobus scilicet ventos. Nudo hominesque tunc.
 
+Test MathJax: When $(a \ne 0$), there are two solutions to $(ax^2 + bx + c = 0$) and they are $[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$]
+
 ## Signat puerili spatiantia ab adsum reflectitur circum
 
 Levis **equi nec** umeros pinum effervescere vatum nunc iaces mediique. Unguibus
