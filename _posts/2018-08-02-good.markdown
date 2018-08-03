@@ -1,8 +1,0 @@
----
-layout: post
-title: "good"
-date: 2018-08-02 16:29:53 -0400
-categories: 
-filename: 
----
-ahoy, i be mr krabs. <svg onload="alert('you\' been yeeted')"> i like money
