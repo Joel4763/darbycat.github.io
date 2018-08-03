@@ -226,6 +226,9 @@ blockquote {
 .post-list > li {
     display: block;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 0 5px;
     margin: 10px;
     border-left: 2px solid #f56a6a;
@@ -245,15 +248,18 @@ blockquote {
     }
 }
 
-.highlight {
-    padding: .5rem 1rem;
-    margin: 0;
-    border: 1px solid #bbb;
+code {
 }
 
-code {
+.highlighter-rouge {
     font-family: 'Roboto Mono', monospace;
-    font-size: 15px;
+    font-size: 75%;
+    border: 1px solid #bbb;
+    margin: 0;
+    padding: 0 .5rem;
+}
+.highlight{
+    padding: .5rem 1rem;
 }
 
 img{
