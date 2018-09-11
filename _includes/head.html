@@ -40,7 +40,7 @@
   <script>
       var toggle = false;
       var openContent = "width: 70%; position: relative; overflow: auto;";
-      var closeSidebar = "transition: 0.2s ease-in 0.2s, clip-path 0.2s; clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); padding: 2.5% 0; width: 0; min-width: 0; overflow: hidden;";//"padding: 2.5% 0; width: 0; min-width: 0; overflow: hidden;";  // transition: 0.2s ease-in 0.2s, clip-path 0.2s; 
+      var closeSidebar = "transition: 0.2s ease-in 0.2s, clip-path 0.2s; height: 0; clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); padding: 2.5% 0; width: 0; min-width: 0; overflow: hidden;";//"padding: 2.5% 0; width: 0; min-width: 0; overflow: hidden;";  // transition: 0.2s ease-in 0.2s, clip-path 0.2s; 
       var openSidebar = "padding: 2.5%; height: 100%; overflow: hidden; transition: all 0.2s, clip-path 0.2s ease 0.2s; clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);";
       var sidebar;
       var content;
@@ -82,7 +82,7 @@
         sidebar.style = openSidebar +  "width: 100%; min-width: 100%;";
         content.style = "width: 0; min-width: 0; position: absolute; overflow: hidden;";
       } else {
-        sidebar.style = openSidebar +  "width: 30%; min-width: 30%;";
+        sidebar.style = openSidebar + "width: 30%; min-width: 30%;";
       }
 
       var data = sessionStorage.getItem("close");
