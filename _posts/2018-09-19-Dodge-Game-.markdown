@@ -8,6 +8,14 @@ filename:
 ---
 This is the game we will be making next Monday, the 24th! Be there to make your own spin on this game! (Attached will be a zip file with the code, once we optimize it.)
 
+<script>
+  window.addEventListener("keydown", function(e) {
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+  }, false);
+</script>
+
 ## Preview
 Arrow keys to move.
 Space to restart the game once you lose.
