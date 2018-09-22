@@ -11,5 +11,5 @@ This is the game we will be making next Monday, the 24th! Be there to make your 
 ## Preview
 Arrow keys to move.
 Space to restart the game once you lose.
-<iframe height="410" width="400" style="border:none;padding:0;" src="https://editor.p5js.org/embed/BkczZFCdQ"></iframe>
+<iframe height="600" width="600" style="border:none;padding:0;" src="https://editor.p5js.org/embed/BkczZFCdQ"></iframe>
 If the scrolling is annoying you, [go to the full page.](https://editor.p5js.org/full/BkczZFCdQ)
