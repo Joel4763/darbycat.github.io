@@ -9,11 +9,22 @@ filename:
 This is the game we will be making next Monday, the 24th! Be there to make your own spin on this game! (Attached will be a zip file with the code, once we optimize it.)
 
 <script>
-  window.addEventListener("keydown", function(e) {
-    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-        e.preventDefault();
-    }
-  }, false);
+  var keys = {};
+window.addEventListener("keydown",
+    function(e){
+        keys[e.keyCode] = true;
+        switch(e.keyCode){
+            case 37: case 39: case 38:  case 40: // Arrow keys
+            case 32: e.preventDefault(); break; // Space
+            default: break; // do not block other keys
+        }
+    },
+false);
+window.addEventListener('keyup',
+    function(e){
+        keys[e.keyCode] = false;
+    },
+false);
 </script>
 
 ## Preview
