@@ -9,7 +9,7 @@ filename:
 Bubble sorting algorithm implemented in p5js
 
 ## Preview
-<iframe height="800" width="800" style="border:none;padding:0;" src="https://editor.p5js.org/embed/r1Xdt_MF7"></iframe>
+<iframe height="400" width="400" style="border:none;padding:0;" src="https://editor.p5js.org/embed/r1Xdt_MF7"></iframe>
 
 Fullscreen version:
 https://editor.p5js.org/full/r1Xdt_MF7
