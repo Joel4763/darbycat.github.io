@@ -12,7 +12,7 @@ Bubble sorting algorithm implemented in p5js
 <iframe height="410" width="400" style="border:none;padding:0;" src="https://editor.p5js.org/embed/r1Xdt_MF7"></iframe>
 
 Fullscreen version:
-(https://editor.p5js.org/full/r1Xdt_MF7)
+[https://editor.p5js.org/full/r1Xdt_MF7](https://editor.p5js.org/full/r1Xdt_MF7)
 
 Source code:
-(https://editor.p5js.org/joshua.sims@hilliardschools.org/sketches/r1Xdt_MF7)
+[https://editor.p5js.org/joshua.sims@hilliardschools.org/sketches/r1Xdt_MF7](https://editor.p5js.org/joshua.sims@hilliardschools.org/sketches/r1Xdt_MF7)
