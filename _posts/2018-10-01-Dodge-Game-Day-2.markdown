@@ -11,5 +11,5 @@ This is the second part of the dodging game we've been making. It now has collis
 If you know anyone else that might be interested in the is sort of thing, you should invite them to come to the next meeting!
 
 # Current state of the game
-<iframe height="410" width="400" src="https://editor.p5js.org/embed/Bytjerec7"></iframe>
+<iframe height="410" width="410" src="https://editor.p5js.org/embed/Bytjerec7"></iframe>
 [Fullscreen version](https://editor.p5js.org/full/Bytjerec7)
