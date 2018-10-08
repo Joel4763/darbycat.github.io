@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Survey"
+date: 2018-10-08 15:40:54 -0400
+categories: Thing
+author: Joel Osler
+filename: https://goo.gl/forms/TzEe4aj4j1uG7m1J3
+---
