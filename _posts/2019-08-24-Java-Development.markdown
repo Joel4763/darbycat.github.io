@@ -6,7 +6,7 @@ categories: Java
 author: Mark
 filename: 
 ---
-Java is the chosen language for APCSP. We use Visual Studio Code to write in Java because it looks nicer than Eclipse and we don't need super advanced debugging utilities. Click [here](https://drive.google.com/file/d/1u3ByQ-xXaWT_TfhXYINTQD1VZvFVNUFs/view?usp=sharing) to download a portable, preconfigured version of Visual Studio Code.
+Java is the chosen language for APCSP. We use Visual Studio Code to write in Java because it looks nicer than Eclipse and we don't need super advanced debugging utilities. Click [here](https://drive.google.com/file/d/1LpGVrwICLGaAKr8GQVKnERUniWLS5UKf/view?usp=sharing) to download a portable, preconfigured version of Visual Studio Code.
 
 **Make sure you are signed in to your Hilliard Schools account to gain access**
 
