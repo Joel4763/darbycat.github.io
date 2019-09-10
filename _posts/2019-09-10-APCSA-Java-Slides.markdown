@@ -8,6 +8,8 @@ filename:
 ---
 Here are the slides for each of the units following the APCSA curriculum. You can use these as a reference with explanations/images.
 
+[Here](https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a) is the pdf for the class by the college board.
+
 **Make sure you are signed in to your Hilliard Schools account to gain access**
 
 [Unit 1](https://docs.google.com/presentation/d/1rs57jHu4ofEM3HrYalIaJXKalVqJqA397TZy_K3hplo/edit?usp=sharing) 2.5-5%
